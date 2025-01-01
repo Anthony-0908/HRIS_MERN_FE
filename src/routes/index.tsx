@@ -3,15 +3,18 @@ import { lazy, Suspense } from "react";
 
 
 
+// const Login = lazy(() => import('../layouts/Layout'))
+const Layout = lazy(() => import('../layouts/layout'))
 const Login = lazy(() => import('../pages/Login'))
-
 
 const router = createBrowserRouter([
     {
         path:"/",
         element:(
             <Suspense fallback={<div>Loading...</div>}>
-                <Login />
+                <Layout>
+                    <Login/>
+                </Layout>
             </Suspense>
         )
     }
