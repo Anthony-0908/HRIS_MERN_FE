@@ -27,7 +27,7 @@ const router = createBrowserRouter([
                   ),
                   children:[
                     {
-                         path:'User/Create',
+                         path:'Create',
                          element:(
                             <Suspense fallback={<div>Loading...</div>}>
                                 <Userpage />
