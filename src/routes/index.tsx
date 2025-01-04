@@ -8,6 +8,7 @@ const Layout = lazy(() => import('../layouts/layout'))
 const Login = lazy(() => import('../pages/Login'))
 const Userpage = lazy(() => import('../pages/Admin/UserPage'))
 
+
 const router = createBrowserRouter([
     {
         path:"/",
@@ -24,6 +25,19 @@ const router = createBrowserRouter([
                       <Userpage />
                     </Suspense>
                   ),
+                  children:[
+                    {
+                         path:'User/Create',
+                         element:(
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Userpage />
+                            </Suspense>
+                         )
+                    }
+                   
+
+                  ]
+
             }
         ]
     },

@@ -1,8 +1,11 @@
-import React from 'react'
+
+import ViewEmployee from '../../features/admin/UserPage/ViewEmployee'
 
 const UserPage = () => {
   return (
-    <div>UserPage</div>
+    <>
+      <ViewEmployee/>
+    </>
   )
 }
 
