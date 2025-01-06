@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 interface User {
   id: number;
   name: string;
@@ -33,6 +33,7 @@ const ViewEmployee: React.FC = () => {
 
   return (
     <>
+    <Link to="/User/Create">Add Employee</Link>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
           <thead>
@@ -67,6 +68,8 @@ const ViewEmployee: React.FC = () => {
           </tbody>
         </table>
       </div>
+
+      
     </>
   );
 };

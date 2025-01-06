@@ -29,10 +29,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
       </div>
 
-      {/* Footer */}
+      {/* Footer
       <footer className="bg-gray-800 text-white p-4 text-center">
         <Footer />
-      </footer>
+      </footer> */}
     </div>
   );
 };

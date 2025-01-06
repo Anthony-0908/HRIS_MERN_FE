@@ -1,10 +1,11 @@
 
-import ViewEmployee from '../../features/admin/UserPage/ViewEmployee'
 
+import { Outlet } from "react-router-dom";
 const UserPage = () => {
   return (
     <>
-      <ViewEmployee/>
+      
+      <Outlet/>
     </>
   )
 }

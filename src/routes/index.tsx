@@ -1,3 +1,4 @@
+
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
@@ -7,7 +8,8 @@ import { lazy, Suspense } from "react";
 const Layout = lazy(() => import('../layouts/layout'))
 const Login = lazy(() => import('../pages/Login'))
 const Userpage = lazy(() => import('../pages/Admin/UserPage'))
-
+const CreatePage = lazy(() => import('../features/admin/UserPage/CreateEmploye'))
+const  ViewEmployee = lazy(() => import('../features/admin/UserPage/ViewEmployee')) 
 
 const router = createBrowserRouter([
     {
@@ -27,10 +29,19 @@ const router = createBrowserRouter([
                   ),
                   children:[
                     {
+                      path:'',
+                      element:( 
+                        <Suspense fallback={<div>Loading...</div> }>
+                          <ViewEmployee/>
+                        </Suspense>
+
+                      )
+                    },
+                    {
                          path:'Create',
                          element:(
                             <Suspense fallback={<div>Loading...</div>}>
-                                <Userpage />
+                                <CreatePage />
                             </Suspense>
                          )
                     }
@@ -47,5 +58,6 @@ const router = createBrowserRouter([
 
     }
 ])
+
 
 export default router;
