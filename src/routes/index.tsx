@@ -13,6 +13,7 @@ const  ViewEmployee = lazy(() => import('../features/admin/UserPage/ViewEmployee
 
 const router = createBrowserRouter([
     {
+      
         path:"/",
         element:(
             <Suspense fallback={<div>Loading...</div>}>
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
 
     {
         path:'/Login',
+        element:(
+          <Suspense fallback={<div>Loading...</div>}>
+            <Login />
+          </Suspense>
+        ),
 
     }
 ])
