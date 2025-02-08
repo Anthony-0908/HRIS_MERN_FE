@@ -7,6 +7,7 @@ import { lazy, Suspense } from "react";
 // const Login = lazy(() => import('../layouts/Layout'))
 const Layout = lazy(() => import('../layouts/layout'))
 const Login = lazy(() => import('../pages/Login'))
+const Dashboard = lazy(() => import('../pages/Dashboard.tsx'))
 const Userpage = lazy(() => import('../pages/Admin/UserPage'))
 const CreatePage = lazy(() => import('../features/admin/UserPage/CreateEmploye'))
 const  ViewEmployee = lazy(() => import('../features/admin/UserPage/ViewEmployee')) 
@@ -62,6 +63,15 @@ const router = createBrowserRouter([
           </Suspense>
         ),
 
+    },
+
+    {
+      path:'/Dashboard',
+      element:(
+        <Suspense fallback={<div>Loading...</div>}>
+          <Dashboard/>
+        </Suspense>
+      )
     }
 ])
 
