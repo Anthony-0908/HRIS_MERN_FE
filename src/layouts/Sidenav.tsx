@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import { FaTimes, FaBars, FaHome } from 'react-icons/fa';
+
 import { NavLink } from 'react-router-dom';
 
 const Sidenav = () => {
@@ -33,13 +34,13 @@ const Sidenav = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `block py-2 px-4 text-gray-700 rounded hover:bg-gray-300 ${
+                `flex py-2 px-4 text-gray-700 rounded hover:bg-gray-300 ${
                   isActive ? 'bg-gray-300 font-semibold' : ''
                 }`
               }
               end
             >
-              Home
+            <FaHome className='h-6 w-6 mr-2'/>  <span>Home </span>
             </NavLink>
             <NavLink
               to="/about"
